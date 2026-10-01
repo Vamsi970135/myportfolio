@@ -23,8 +23,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <!-- Ambient Glassmorphism Light Orbs -->
+    <!-- Reading Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+    <!-- Ambient Glassmorphism Light Orbs & Interactive Cyber Mesh Canvas -->
     <div class="bg-ambient">
+        <canvas id="cyberNetworkCanvas" class="cyber-network-canvas"></canvas>
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
@@ -80,7 +84,12 @@
             <div class="home-grid">
                 <div class="home-content">
                     <div class="badge-chip">
+                        <span class="live-pulse-indicator" aria-hidden="true">
+                            <span class="pulse-ring"></span>
+                            <span class="pulse-core"></span>
+                        </span>
                         <i class="fas fa-shield-virus"></i> Cybersecurity & Endpoint Management
+                        <span class="soc-text-tag">· Systems Monitored</span>
                     </div>
                     <div class="text-1">Hello, I'm</div>
                     <h1 class="text-2">Vamsi Talluri</h1>
@@ -118,7 +127,13 @@
                 </div>
 
                 <div class="hero-visual">
-                    <div class="profile-glass-card">
+                    <div class="cyber-holo-ring" aria-hidden="true">
+                        <div class="holo-ring-inner ring-outer"></div>
+                        <div class="holo-ring-inner ring-middle"></div>
+                        <div class="holo-ring-inner ring-center"></div>
+                        <div class="holo-radar-sweep"></div>
+                    </div>
+                    <div class="profile-glass-card" data-tilt>
                         <div class="floating-badge badge-top">
                             <div class="badge-icon"><i class="fas fa-user-shield"></i></div>
                             <div class="badge-text">
@@ -216,7 +231,7 @@
             <p class="subtitle">6+ months of hands-on experience in cybersecurity operations, endpoint security, and IT infrastructure</p>
 
             <div class="experience-wrapper">
-                <div class="exp-main-card glass-panel">
+                <div class="exp-main-card glass-panel card-border-glow">
                     <div class="exp-header">
                         <div class="exp-title-area">
                             <h3>Technical Analyst – Cybersecurity & IT Operations</h3>
@@ -455,7 +470,7 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card glass-panel">
+                <div class="project-card glass-panel card-border-glow">
                     <div class="project-top">
                         <div class="project-tag-row">
                             <span class="project-category">SIEM & Threat Detection</span>
