@@ -12,7 +12,7 @@
 
 ## 📝 Description
 
-- 🌍 I'm based in **Guntur, India**  
+- 🌍 I'm based in **India**  
 - 📧 You can reach me at **vtalluri915@gmail.com**  
 - 💡 Currently working on **Cybersecurity**, **Django/Flask Projects**, and **Google Cloud Applications**  
 - 🤝 Open to collaborate on **Cybersecurity**, **AI Projects**, and **Full-Stack Web Development**

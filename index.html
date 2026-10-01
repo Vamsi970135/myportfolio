@@ -3,166 +3,732 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portfolio </title>
+    <title>Vamsi Talluri - Technical Analyst | Cybersecurity</title>
+    <meta name="description" content="Portfolio of Vamsi Talluri - Technical Analyst with 6+ months of experience in cybersecurity operations, endpoint management, vulnerability assessment, patch management, and SIEM monitoring.">
+    <meta property="og:title" content="Vamsi Talluri - Technical Analyst | Cybersecurity">
+    <meta property="og:description" content="Portfolio of Vamsi Talluri - Technical Analyst with 6+ months of experience in cybersecurity operations, endpoint management, vulnerability assessment, patch management, and SIEM monitoring.">
+    <!-- Early theme initialization to prevent flash -->
+    <script>
+        (function() {
+            try {
+                const saved = localStorage.getItem('portfolio-theme');
+                const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+                const theme = saved ? saved : (prefersLight ? 'light' : 'dark');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {}
+        })();
+    </script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
+    <!-- Ambient Glassmorphism Light Orbs -->
+    <div class="bg-ambient">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
     </div>
+
+    <!-- Scroll Up Button -->
+    <div class="scroll-up-btn" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="#">Portfolio</a></div>
+            <div class="logo">
+                <a href="#home">
+                    <span class="logo-icon"><i class="fas fa-shield-alt"></i></span>
+                    <div>
+                        <span>Vamsi Talluri</span>
+                        <span class="logo-role">Cybersecurity Analyst</span>
+                    </div>
+                </a>
+            </div>
             <ul class="menu">
-                <li><a href="#home" class="menu-btn">Home</a></li>
-                <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#contact" class="menu-btn">Contact</a></li>
+                <li><a href="#home" class="menu-btn-link">Home</a></li>
+                <li><a href="#about" class="menu-btn-link">About</a></li>
+                <li><a href="#experience" class="menu-btn-link">Experience</a></li>
+                <li><a href="#skills" class="menu-btn-link">Skills</a></li>
+                <li><a href="#projects" class="menu-btn-link">Projects</a></li>
+                <li><a href="#education" class="menu-btn-link">Education & Certs</a></li>
+                <li><a href="#contact" class="nav-cta menu-btn-link"><i class="fas fa-paper-plane"></i> Contact</a></li>
+                <li class="mobile-theme-item">
+                    <button class="mobile-theme-btn" id="mobileThemeToggleBtn" type="button" aria-label="Toggle light and dark mode">
+                        <span class="theme-label"><i class="fas fa-adjust"></i> Theme</span>
+                        <span class="theme-mode-text" id="mobileThemeModeText">Dark Mode</span>
+                    </button>
+                </li>
             </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle light and dark mode" title="Toggle theme (Light / Dark)">
+                    <i class="fas fa-sun theme-icon-sun"></i>
+                    <i class="fas fa-moon theme-icon-moon"></i>
+                </button>
+                <div class="menu-btn" title="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
         </div>
     </nav>
 
-
+    <!-- Hero / Home Section -->
     <section class="home" id="home">
         <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Vamsi Talluri</div>
-                <div class="text-3">And I'm a Student</span></div>
+            <div class="home-grid">
+                <div class="home-content">
+                    <div class="badge-chip">
+                        <i class="fas fa-shield-virus"></i> Cybersecurity & Endpoint Management
+                    </div>
+                    <div class="text-1">Hello, I'm</div>
+                    <h1 class="text-2">Vamsi Talluri</h1>
+                    <div class="text-3">
+                        <span class="typing-text role-highlight">Technical Analyst – Cybersecurity & IT Operations</span><span class="typing-cursor">|</span>
+                    </div>
+                    <p class="hero-summary">
+                        Technical Analyst with 6+ months of hands-on experience in cybersecurity operations, endpoint management, vulnerability assessment, patch management, security monitoring, and incident investigation across enterprise and cloud infrastructures.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#experience" class="btn-primary">
+                            <i class="fas fa-briefcase"></i> View Experience
+                        </a>
+                        <a href="#skills" class="btn-glass">
+                            <i class="fas fa-layer-group"></i> Technical Skills
+                        </a>
+                        <a href="#contact" class="btn-glass">
+                            <i class="fas fa-envelope"></i> Get in Touch
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-card glass-panel">
+                            <span class="stat-number">6+</span>
+                            <span class="stat-label">Months Hands-on Exp</span>
+                        </div>
+                        <div class="stat-card glass-panel">
+                            <span class="stat-number">SIEM</span>
+                            <span class="stat-label">Wazuh & Splunk</span>
+                        </div>
+                        <div class="stat-card glass-panel">
+                            <span class="stat-number">VAPT</span>
+                            <span class="stat-label">Vulnerability Assessment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="profile-glass-card">
+                        <div class="floating-badge badge-top">
+                            <div class="badge-icon"><i class="fas fa-user-shield"></i></div>
+                            <div class="badge-text">
+                                <span class="b-title">SecOps & VAPT</span>
+                                <span class="b-sub">Threat Detection</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-img-wrap">
+                            <img src="image2.jpeg" alt="Vamsi Talluri - Cybersecurity Technical Analyst" onerror="this.src='im2.jpeg'">
+                        </div>
+
+                        <div class="floating-badge badge-bottom">
+                            <div class="badge-icon"><i class="fas fa-cloud"></i></div>
+                            <div class="badge-text">
+                                <span class="b-title">AWS & Cloud Security</span>
+                                <span class="b-sub">OpenVPN & EasyRSA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-
+    <!-- About Me Section -->
     <section class="about" id="about">
         <div class="max-width">
-            <h2 class="title">About me</h2>
-            <div class="about-content">
-                <div class="column left">
-                    <img src="image2.jpeg" alt="">
-                </div>
-                <div class="column right">
-                    <div class="text">I'm Vamsi Talluri, an Engineering student</div>
-                    <p>As a computer engineering student with a focus on web development, I am proficient in various technologies such as HTML, CSS, JavaScript, and frameworks like React and Angular. In addition, I have experience in programming languages like Java and Python..</p>
+            <h2 class="title">About <span>Me</span></h2>
+            <p class="subtitle">Professional profile, background, and core cybersecurity competencies</p>
+            
+            <div class="about-grid">
+                <div class="about-card glass-panel">
+                    <div class="about-lead">
+                        I am <span>Vamsi Talluri</span>, a dedicated Technical Analyst specializing in Cybersecurity, IT Operations, and Endpoint Security.
+                    </div>
+                    <p class="about-text">
+                        Technical Analyst with 6+ months of hands-on experience in cybersecurity operations, endpoint management, vulnerability assessment, patch management, security monitoring, network security, cloud infrastructure, incident investigation, and technical troubleshooting. Experienced with Wazuh, Splunk, Nmap, Burp Suite, Nessus, Metasploit, Wireshark, AWS, Linux, Windows Server, VPN, and Syslog. Skilled in security analysis, endpoint administration, vulnerability remediation, incident investigation, infrastructure support, and technical documentation.
+                    </p>
+
+                    <div class="about-features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-desktop"></i>
+                            <div>
+                                <h4>Endpoint Management & Patching</h4>
+                                <p>Managing Windows & Linux endpoints, security controls, patch deployment, health monitoring, and system hardening.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Security Monitoring & SIEM</h4>
+                                <p>Real-time log collection, alert analysis, event triage, and centralized monitoring with Wazuh and Splunk.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bug"></i>
+                            <div>
+                                <h4>VAPT & Security Assessment</h4>
+                                <p>Reconnaissance, endpoint discovery, Web & API testing, vulnerability validation, and remediation planning.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <div>
+                                <h4>Cloud & Network Infrastructure</h4>
+                                <p>Configuring secure testing labs on AWS EC2, Client VPN, OpenVPN, EasyRSA, IAM, firewalls, and Syslog.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-meta-row">
+                        <div class="meta-pill">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>India</span>
+                        </div>
+                        <div class="meta-pill">
+                            <i class="fas fa-envelope"></i>
+                            <span>vtalluri915@gmail.com</span>
+                        </div>
+                        <div class="meta-pill">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Open for Cybersecurity & SecOps Roles</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
 
+    <!-- Professional Experience Section -->
+    <section class="experience" id="experience">
+        <div class="max-width">
+            <h2 class="title">Professional <span>Experience</span></h2>
+            <p class="subtitle">6+ months of hands-on experience in cybersecurity operations, endpoint security, and IT infrastructure</p>
 
+            <div class="experience-wrapper">
+                <div class="exp-main-card glass-panel">
+                    <div class="exp-header">
+                        <div class="exp-title-area">
+                            <h3>Technical Analyst – Cybersecurity & IT Operations</h3>
+                            <div class="company"><i class="fas fa-shield-virus"></i> Cybersecurity Operations & Infrastructure</div>
+                        </div>
+                        <div class="exp-badge-duration">
+                            <i class="fas fa-calendar-alt"></i> 6+ Months Experience
+                        </div>
+                    </div>
+
+                    <p class="exp-summary-tagline">
+                        Supported cybersecurity and IT operations covering security monitoring, endpoint management, vulnerability assessment, patch management, incident investigation, network security, and technical troubleshooting across enterprise hybrid environments.
+                    </p>
+
+                    <ul class="exp-responsibilities">
+                        <li>Managed and monitored endpoints across Windows and Linux environments, including system configuration, security controls, endpoint health, and troubleshooting.</li>
+                        <li>Supported patch management activities including identifying missing security updates, coordinating remediation, validating patch deployment, and maintaining system security posture.</li>
+                        <li>Worked with Wazuh for endpoint monitoring, log collection, security alert analysis, event investigation, and security monitoring.</li>
+                        <li>Performed vulnerability assessments using Nmap, Nessus, Burp Suite, Metasploit, and Wireshark and supported remediation of identified vulnerabilities.</li>
+                        <li>Conducted web application and API security testing covering endpoint enumeration, authentication, authorization, input validation, and security misconfiguration checks.</li>
+                        <li>Supported VAPT activities for web applications, APIs, Android applications, IoT systems, and enterprise infrastructure.</li>
+                        <li>Investigated security and infrastructure incidents using logs, alerts, system information, and network activity to identify probable root causes and corrective actions.</li>
+                        <li>Worked with network security technologies including VPN, Syslog, firewalls, VLANs, TCP/IP, and network monitoring.</li>
+                        <li>Configured cybersecurity lab environments using AWS EC2, AWS Client VPN, OpenVPN, and EasyRSA for controlled security testing.</li>
+                        <li>Supported cloud security activities involving IAM, access control, network security, security groups, and secure remote connectivity.</li>
+                        <li>Worked with SonarQube and SonarScanner for source-code quality and security analysis and supported configuration and troubleshooting.</li>
+                        <li>Provided technical support for Windows, Linux, Windows Server, network infrastructure, endpoint management, and virtualization environments.</li>
+                        <li>Prepared vulnerability reports, incident investigation reports, MOPs, implementation procedures, patching documentation, and remediation recommendations.</li>
+                    </ul>
+
+                    <div class="exp-tech-tags">
+                        <span class="tech-tag">Wazuh</span>
+                        <span class="tech-tag">Splunk</span>
+                        <span class="tech-tag">Burp Suite</span>
+                        <span class="tech-tag">Nmap</span>
+                        <span class="tech-tag">Nessus</span>
+                        <span class="tech-tag">Metasploit</span>
+                        <span class="tech-tag">Wireshark</span>
+                        <span class="tech-tag">AWS EC2</span>
+                        <span class="tech-tag">OpenVPN</span>
+                        <span class="tech-tag">SonarQube</span>
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">Windows Server</span>
+                        <span class="tech-tag">Patch Management</span>
+                        <span class="tech-tag">Syslog</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section (Glassmorphism Cards) -->
     <section class="skills" id="skills">
         <div class="max-width">
-            <h2 class="title">My skills</h2>
-            <div class="skills-content">
-                <div class="column left">
-                    <div class="text">My creative skills </div>
-                    <p>My journey through the world of technology has instilled in me a profound appreciation for creative problem-solving. My creative mind fuels my passion for innovation in coding, software development, and UX design. I'm committed to adapting and staying at the forefront of technology, all while embracing the responsibility of using technology ethically and for the betterment of society. Join me in this exciting adventure through the ever-evolving world of computer science and engineering.</p>
+            <h2 class="title">Technical <span>Skills</span></h2>
+            <p class="subtitle">Comprehensive technical capabilities derived directly from hands-on security operations</p>
+
+            <div class="skills-grid">
+                <!-- 1. Cybersecurity & VAPT -->
+                <div class="skill-card glass-panel">
+                    <div>
+                        <div class="skill-card-head">
+                            <div class="skill-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+                            <h3>Cybersecurity</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> SIEM</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Security Monitoring</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> VAPT</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Vulnerability Assessment</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Incident Investigation</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Security Hardening</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="column right">
-                    <div class="bars">
-                        <div class="info">
-                            <span>HTML</span>
-                            <span>60%</span>
+
+                <!-- 2. Endpoint Security -->
+                <div class="skill-card glass-panel">
+                    <div>
+                        <div class="skill-card-head">
+                            <div class="skill-icon-wrap"><i class="fas fa-laptop-medical"></i></div>
+                            <h3>Endpoint Security</h3>
                         </div>
-                        <div class="line html"></div>
+                        <div class="skill-pills">
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Endpoint Management</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Patch Management</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Security Updates</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> System Hardening</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Windows Security</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Linux Security</span>
+                        </div>
                     </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>CSS</span>
-                            <span>60%</span>
+                </div>
+
+                <!-- 3. Security Tools -->
+                <div class="skill-card glass-panel">
+                    <div>
+                        <div class="skill-card-head">
+                            <div class="skill-icon-wrap"><i class="fas fa-tools"></i></div>
+                            <h3>Security Tools</h3>
                         </div>
-                        <div class="line css"></div>
+                        <div class="skill-pills">
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Wazuh</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Splunk</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Nmap</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Burp Suite</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Nessus</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Metasploit</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Wireshark</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Kali Linux</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> SonarQube</span>
+                        </div>
                     </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>C programming</span>
-                            <span>70%</span>
+                </div>
+
+                <!-- 4. Network Security -->
+                <div class="skill-card glass-panel">
+                    <div>
+                        <div class="skill-card-head">
+                            <div class="skill-icon-wrap"><i class="fas fa-network-wired"></i></div>
+                            <h3>Network Security</h3>
                         </div>
-                        <div class="line cp"></div>
+                        <div class="skill-pills">
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> TCP/IP</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> DNS & DHCP</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> VLAN</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> VPN</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Firewalls</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Syslog</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Network Monitoring</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Packet Analysis</span>
+                        </div>
                     </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>Python</span>
-                            <span>70%</span>
+                </div>
+
+                <!-- 5. Cloud Security -->
+                <div class="skill-card glass-panel">
+                    <div>
+                        <div class="skill-card-head">
+                            <div class="skill-icon-wrap"><i class="fas fa-cloud"></i></div>
+                            <h3>Cloud Security</h3>
                         </div>
-                        <div class="line python"></div>
+                        <div class="skill-pills">
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> AWS</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> EC2</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> IAM</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Client VPN</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Security Groups</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> OpenVPN</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> EasyRSA</span>
+                        </div>
                     </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>Java</span>
-                            <span>50%</span>
+                </div>
+
+                <!-- 6. Operating Systems & Virtualization -->
+                <div class="skill-card glass-panel">
+                    <div>
+                        <div class="skill-card-head">
+                            <div class="skill-icon-wrap"><i class="fas fa-server"></i></div>
+                            <h3>Systems & Virtualization</h3>
                         </div>
-                        <div class="line java"></div>
+                        <div class="skill-pills">
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Linux</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Kali Linux</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Windows</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Windows Server</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Hyper-V</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Programming & Databases -->
+                <div class="skill-card glass-panel">
+                    <div>
+                        <div class="skill-card-head">
+                            <div class="skill-icon-wrap"><i class="fas fa-code"></i></div>
+                            <h3>Programming & Scripting</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Python</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Java</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> SQL</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. DevOps & Workflow Tools -->
+                <div class="skill-card glass-panel">
+                    <div>
+                        <div class="skill-card-head">
+                            <div class="skill-icon-wrap"><i class="fas fa-cogs"></i></div>
+                            <h3>Tools & DevOps</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Git & GitHub</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> Docker</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> SonarQube</span>
+                            <span class="skill-pill"><i class="fas fa-check-circle"></i> SonarScanner</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    
-    <section class="contact" id="contact">
+    <!-- Key Projects Section -->
+    <section class="projects" id="projects">
         <div class="max-width">
-            <h2 class="title">Contact me</h2>
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Get in Touch</div>
-                    <p>Let's connect and explore the endless possibilities of tech and innovation together. Drop me a line, and I'll get back to you soon!</p>
-                    <div class="icons">
-                        <div class="row">
-                            <i class="fas fa-user"></i>
-                            <div class="info">
-                                <div class="head">Name</div>
-                                <div class="sub-title">Vamsi Talluri</div>
+            <h2 class="title">Key <span>Projects</span></h2>
+            <p class="subtitle">Hands-on security engineering, isolation labs, and assessment architectures</p>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-panel">
+                    <div class="project-top">
+                        <div class="project-tag-row">
+                            <span class="project-category">Cloud Security Lab</span>
+                            <i class="fas fa-shield-alt project-icon"></i>
+                        </div>
+                        <h3>AWS Vulnerable Cybersecurity Lab</h3>
+                        <p>Architected and deployed an isolated sandbox environment designed for controlled offensive and defensive cybersecurity testing and simulation.</p>
+                        <ul class="project-bullets">
+                            <li>Configured an isolated cybersecurity lab using AWS EC2, Client VPN, OpenVPN, and EasyRSA for controlled security testing.</li>
+                            <li>Implemented granular IAM policies and security groups to prevent unauthorized external access.</li>
+                            <li>Created repeatable workflows for vulnerability simulation and forensic analysis.</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span>AWS</span>
+                        <span>EC2</span>
+                        <span>OpenVPN</span>
+                        <span>EasyRSA</span>
+                        <span>Client VPN</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-panel">
+                    <div class="project-top">
+                        <div class="project-tag-row">
+                            <span class="project-category">SIEM & Threat Detection</span>
+                            <i class="fas fa-satellite-dish project-icon"></i>
+                        </div>
+                        <h3>Wazuh Security Monitoring</h3>
+                        <p>Built a centralized security monitoring architecture to achieve complete endpoint visibility, continuous log collection, and real-time alert triage.</p>
+                        <ul class="project-bullets">
+                            <li>Configured centralized security monitoring, endpoint visibility, log collection, alert analysis, and infrastructure integration.</li>
+                            <li>Integrated Windows and Linux agents with automated rule triggers for threat detection.</li>
+                            <li>Streamlined Syslog forwarding and incident response triage workflows.</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span>Wazuh</span>
+                        <span>Linux</span>
+                        <span>Windows</span>
+                        <span>Syslog</span>
+                        <span>Alert Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-panel">
+                    <div class="project-top">
+                        <div class="project-tag-row">
+                            <span class="project-category">VAPT Assessment</span>
+                            <i class="fas fa-lock-open project-icon"></i>
+                        </div>
+                        <h3>Web & API Security Assessment</h3>
+                        <p>Comprehensive security testing engagement covering API endpoints, web application interfaces, and network services.</p>
+                        <ul class="project-bullets">
+                            <li>Performed reconnaissance, endpoint discovery, request analysis, authentication testing, vulnerability validation, and security reporting.</li>
+                            <li>Evaluated authentication, authorization bypasses, and OWASP Top 10 vulnerabilities.</li>
+                            <li>Prepared remediation reports and technical remediation roadmaps.</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span>Burp Suite</span>
+                        <span>Nmap</span>
+                        <span>Nessus</span>
+                        <span>Wireshark</span>
+                        <span>Metasploit</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Decentralized LAN Project -->
+                <div class="project-card glass-panel">
+                    <div class="project-top">
+                        <div class="project-tag-row">
+                            <span class="project-category">Decentralized Networking & Security</span>
+                            <i class="fas fa-project-diagram project-icon"></i>
+                        </div>
+                        <h3>Decentralized LAN Project</h3>
+                        <p>Architected and configured a peer-to-peer decentralized Local Area Network (LAN) infrastructure designed to eliminate central chokepoints and establish autonomous, resilient node communication.</p>
+                        <ul class="project-bullets">
+                            <li>Designed decentralized node discovery and mesh routing topologies enabling devices on the local area network to communicate peer-to-peer without reliance on single centralized routers or domain controllers.</li>
+                            <li>Implemented end-to-end encrypted packet transmission with mutual peer cryptographic authentication, protecting internal communication flows against eavesdropping.</li>
+                            <li>Applied zero-trust local network policies, automated packet filtering, and anomaly isolation to shield nodes against ARP poisoning, broadcast storms, and unauthorized lateral movement.</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span>Decentralized LAN</span>
+                        <span>P2P Networking</span>
+                        <span>Zero Trust</span>
+                        <span>Packet Filtering</span>
+                        <span>Mesh Topologies</span>
+                        <span>Cryptographic Security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section class="education" id="education">
+        <div class="max-width">
+            <h2 class="title">Education & <span>Certifications</span></h2>
+            <p class="subtitle">Academic background, professional credentials, and technical exposure</p>
+
+            <div class="edu-cert-grid">
+                <!-- Education Column -->
+                <div class="column-card glass-panel">
+                    <div class="col-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Education</h3>
+                    </div>
+                    <div class="timeline-items">
+                        <div class="timeline-box">
+                            <div class="box-meta">
+                                <span>Undergraduate Degree</span>
+                                <span>Engineering</span>
+                            </div>
+                            <h4>Bachelor of Technology (B.Tech)</h4>
+                            <p>Computer Science & Engineering background with deep specialization in Cybersecurity Operations, Network Defense, and Systems Administration.</p>
+                        </div>
+                    </div>
+
+                    <!-- Additional Exposure in Education Card -->
+                    <div style="margin-top: 28px;">
+                        <h4 style="font-size: 15px; color: #fff; margin-bottom: 12px; font-weight: 700;">
+                            <i class="fas fa-certificate" style="color: var(--primary); margin-right: 6px;"></i> Technical Training Foundations
+                        </h4>
+                        <div class="timeline-box">
+                            <div class="box-meta">
+                                <span>Specialized Program</span>
+                                <span>Security Foundations</span>
+                            </div>
+                            <h4>Cybersecurity & Network Security Training</h4>
+                            <p>Rigorous practical training covering packet inspection, defensive firewall configuration, vulnerability assessment, and threat hunting.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications Column -->
+                <div class="column-card glass-panel">
+                    <div class="col-header">
+                        <i class="fas fa-award"></i>
+                        <h3>Certifications & Credentials</h3>
+                    </div>
+                    <div class="certs-list">
+                        <div class="cert-item">
+                            <div class="cert-badge-icon"><i class="fas fa-certificate"></i></div>
+                            <div>
+                                <h4>Oracle Certified Professional</h4>
+                                <p>OCI DevOps Professional</p>
                             </div>
                         </div>
-                        <div class="row">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="info">
-                                <div class="head">Address</div>
-                                <div class="sub-title">Visakhapatnam,Anhra pradesh</div>
+
+                        <div class="cert-item">
+                            <div class="cert-badge-icon"><i class="fab fa-google"></i></div>
+                            <div>
+                                <h4>Google Cloud Security and Cloud Infrastructure</h4>
+                                <p>Comprehensive training in GCP IAM, cloud defenses, and infrastructure security</p>
                             </div>
                         </div>
-                        <div class="row">
-                            <i class="fas fa-envelope"></i>
-                            <div class="info">
-                                <div class="head">Email</div>
-                                <div class="sub-title">Vtalluri915@gmail.com</div>
+
+                        <div class="cert-item">
+                            <div class="cert-badge-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div>
+                                <h4>Cybersecurity and Network Security Training</h4>
+                                <p>Advanced practical training in enterprise network protection and threat mitigation</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="column right">
-                    <div class="text">Message me</div>
-                    <form action="#">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" placeholder="Name" required>
+            </div>
+
+            <!-- Additional Technical Exposure Card -->
+            <div class="exposure-box glass-panel">
+                <h3><i class="fas fa-layer-group"></i> Additional Technical Exposure</h3>
+                <div class="exposure-grid">
+                    <div class="exposure-item"><i class="fas fa-check-circle"></i> Microsoft 365 Security and Administration</div>
+                    <div class="exposure-item"><i class="fas fa-check-circle"></i> Windows Server Administration and Troubleshooting</div>
+                    <div class="exposure-item"><i class="fas fa-check-circle"></i> Hyper-V Virtualization and Infrastructure Support</div>
+                    <div class="exposure-item"><i class="fas fa-check-circle"></i> SOTI MobiControl and Endpoint Management</div>
+                    <div class="exposure-item"><i class="fas fa-check-circle"></i> VPN Administration and Remote Access Support</div>
+                    <div class="exposure-item"><i class="fas fa-check-circle"></i> Syslog Configuration and Log Management</div>
+                    <div class="exposure-item"><i class="fas fa-check-circle"></i> Network Troubleshooting and Infrastructure Support</div>
+                    <div class="exposure-item"><i class="fas fa-check-circle"></i> Security Documentation, MOPs, Incident & Remediation Reports</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contact <span>Me</span></h2>
+            <p class="subtitle">Let's connect regarding cybersecurity analyst opportunities, consultations, or collaboration</p>
+
+            <div class="contact-grid">
+                <div class="contact-info-card glass-panel">
+                    <div>
+                        <h3>Get in Touch</h3>
+                        <p>I am available for full-time Technical Analyst, SOC Analyst, Endpoint Security, and Cybersecurity roles. Feel free to contact me directly.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-row">
+                                <div class="contact-icon-box"><i class="fas fa-user"></i></div>
+                                <div class="contact-text">
+                                    <div class="label">Name</div>
+                                    <div class="value">Vamsi Talluri</div>
+                                </div>
                             </div>
-                            <div class="field email">
-                                <input type="email" placeholder="Email" required>
+
+                            <div class="contact-row">
+                                <div class="contact-icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="contact-text">
+                                    <div class="label">Location</div>
+                                    <div class="value">India</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-row">
+                                <div class="contact-icon-box"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-text">
+                                    <div class="label">Email</div>
+                                    <a href="mailto:vtalluri915@gmail.com" class="value">vtalluri915@gmail.com</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="field">
-                            <input type="text" placeholder="Subject" required>
+
+                        <!-- Social & Professional Profile Buttons -->
+                        <div class="contact-social-section">
+                            <div class="social-heading"><i class="fas fa-link"></i> Profiles & Direct Links</div>
+                            <div class="social-buttons-grid">
+                                <a href="https://linkedin.com/in/vamsi-talluri" target="_blank" rel="noopener noreferrer" class="social-btn linkedin-btn" title="View LinkedIn Profile">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                    <i class="fas fa-external-link-alt ext-icon"></i>
+                                </a>
+                                <a href="https://github.com/Vamsi970135" target="_blank" rel="noopener noreferrer" class="social-btn github-btn" title="View GitHub Repositories">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                    <i class="fas fa-external-link-alt ext-icon"></i>
+                                </a>
+                                <a href="mailto:vtalluri915@gmail.com" class="social-btn mail-btn" title="Send an Email">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Mail</span>
+                                    <i class="fas fa-paper-plane ext-icon"></i>
+                                </a>
+                                <a href="https://tryhackme.com/p/VAMSI" target="_blank" rel="noopener noreferrer" class="social-btn tryhackme-btn" title="View TryHackMe Profile">
+                                    <i class="fas fa-terminal"></i>
+                                    <span>TryHackMe</span>
+                                    <i class="fas fa-external-link-alt ext-icon"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                    </div>
+                </div>
+
+                <div class="contact-form-card glass-panel">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group-row">
+                            <div class="form-field">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" placeholder="e.g. John Doe" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" placeholder="e.g. john@example.com" required>
+                            </div>
                         </div>
-                        <div class="button-area">
-                            <button type="submit">Send message</button>
+                        <div class="form-field">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Cybersecurity Analyst Opportunity / Discussion" required>
                         </div>
+                        <div class="form-field">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Hi Vamsi, I came across your portfolio and would like to connect..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-msg">
+        <i class="fas fa-check-circle" style="color: var(--accent); font-size: 18px;"></i>
+        <span id="toastText">Thank you! Your message has been sent successfully.</span>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <span>Creted BY Vamsi Talluri </a> </span>
+        <div class="max-width">
+            <p>© 2026 <span>Vamsi Talluri</span> • Technical Analyst – Cybersecurity & IT Operations</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
